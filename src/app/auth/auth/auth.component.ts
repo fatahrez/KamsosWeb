@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
-@Component({
+@Component({    
   selector: 'app-auth',
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css']
 })
-export class AuthComponent implements OnInit {
+export class AuthComponent {
 
-  constructor() { }
+  authForm: FormGroup;
 
-  ngOnInit() {
+  constructor(
+    private fb: FormBuilder
+  ) {
+    this.authForm = this.fb.group({
+      'email': [' ', Validators.required ],
+      'password': [' ', Validators.required ]
+    });
+   }
+
+  submitForm() {
+    let credentials = this.authForm.value;
+    console.log(credentials);
+    
   }
-
 }
