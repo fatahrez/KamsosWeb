@@ -1,15 +1,17 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common'; 
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AuthComponent } from './auth/auth.component';
-import { SharedModule } from '../shared';
+import { SharedModule } from '../shared'; 
 
 const authRouting: ModuleWithProviders = RouterModule.forChild([
   {
     path: 'login',
     component: AuthComponent
-  },{
+  },
+  {
     path: 'register',
     component: AuthComponent
   }
@@ -19,7 +21,11 @@ const authRouting: ModuleWithProviders = RouterModule.forChild([
   declarations: [AuthComponent],
   imports: [
     authRouting,
-    SharedModule
-  ]
+    SharedModule,
+    CommonModule,
+    ReactiveFormsModule,
+  ],
+
+  providers:[]
 })
 export class AuthModule { }

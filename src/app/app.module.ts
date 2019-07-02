@@ -25,10 +25,10 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AuthModule,
     SharedModule,
     HomeModule, 
-    rootRouting,
-    AuthModule
+    rootRouting
   ],
   providers: [],
   bootstrap: [AppComponent]

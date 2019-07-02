@@ -19,19 +19,21 @@ export class AuthComponent implements OnInit {
     private fb: FormBuilder
   ) {
     this.authForm = this.fb.group({
-      'email': [' ', Validators.required ],
-      'password': [' ', Validators.required ]
+      'email': ['', Validators.required ],
+      'password': ['', Validators.required ]
     });
    }
 
    ngOnInit(){
      this.route.url.subscribe(data => {
+
        this.authType = data[data.length - 1].path;
        this.title = (this.authType === 'login') ? 'Sign in': 'Sign Up';
        if (this.authType === 'register') {
          this.authForm.addControl('username', new FormControl('', Validators.required));
        }
      });
+     
    }
 
   submitForm() {
