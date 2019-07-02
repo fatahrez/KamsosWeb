@@ -16,10 +16,16 @@ export class ApiService {
 
   private setHeader(): HttpHeaders{
     let headersConfig = {
-      'Content-Type': 'app;ication/json',
+      'Content-Type': 'application/json',
       'Accept': 'application/json'
     };
 
     return new HttpHeaders(headersConfig);
   }
+
+  private formatError(error: any){
+    return Observable.throw(error.json())
+  }
+
+  
 }
