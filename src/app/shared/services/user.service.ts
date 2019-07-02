@@ -18,5 +18,10 @@ export class UserService {
     private http: HttpClient
   ) { }
 
-  setAuth
+  setAuth(user: User){
+    this.currentUserSubject.next(user);
+    this.isAuthenticatedSubject.next(true);
+  }
+
+  
 }
