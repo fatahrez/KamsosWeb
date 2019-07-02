@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
+import { AuthModule } from './auth/auth.module';
 
 import {
   SharedModule,
@@ -26,7 +27,8 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     AppRoutingModule,
     SharedModule,
     HomeModule, 
-    rootRouting
+    rootRouting,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
