@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpHeaders, HttpClient, HttpParams, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -29,10 +29,9 @@ export class ApiService {
   post(path: string, body):  Observable<any> {
     return this.http.post(`${environment.api_url}${path}`, JSON.stringify(body), { headers: this.setHeader()})
     .pipe(
-      retry(1),
-      catchError(error =>{
-        return Observable.throw('something went wrong;')
-      })
+      map(
+        (res: HttpResponse<any>)=> res["body"],
+        )
     );
   }
 }

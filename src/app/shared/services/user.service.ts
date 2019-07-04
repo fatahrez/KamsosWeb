@@ -4,7 +4,7 @@ import { ApiService } from './api.service';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { User } from '../models';
-import { distinctUntilChanged } from 'rxjs/operators';
+import { distinctUntilChanged, map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -31,10 +31,13 @@ export class UserService {
     let route = (type === 'login') ? '/login' : '';
     return this.apiService.post("/auth" + route, {user: credentials})
     .pipe(
-      tap(data => {
-        this.setAuth(data.user);
-        return data;
-      })
+      map(
+        data => {
+          this.setAuth(data.user);
+          console.log(data);
+          return data;
+        }
+      )
     );
   }
 
