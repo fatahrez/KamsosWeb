@@ -29,7 +29,7 @@ export class UserService {
 
   attemptAuth(type, credentials): Observable<User>{
     let route = (type === 'login') ? '/login' : '';
-    return this.apiService.post("/users" + route, {user: credentials})
+    return this.apiService.post("/auth" + route, {user: credentials})
     .pipe(
       tap(data => {
         this.setAuth(data.user);
