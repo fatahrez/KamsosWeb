@@ -1,3 +1,5 @@
-<p>
-  list-errors works!
-</p>
+<ul class="error-message" *ngIf="errorList">
+  <li *ngIf="let error of errorList">
+    {{ error }}
+  </li>
+</ul>
