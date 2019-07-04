@@ -4,13 +4,15 @@ import { ApiService } from './api.service';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { User } from '../models';
+import { distinctUntilChanged } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
   private currentUserSubject = new BehaviorSubject<User>(new User());
-  public currentUser = this.currentUserSubject.asObservable().distinctUntilChanged();
+  public currentUser = this.currentUserSubject.asObservable().pipe(distinctUntilChanged());
 
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
   public isAuthenticated = this.isAuthenticatedSubject.asObservable();
