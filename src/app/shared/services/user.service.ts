@@ -35,4 +35,8 @@ export class UserService {
     );
   }
 
+  getCurrentUser(): User{
+    return this.currentUserSubject.value;
+  }
+
 }
