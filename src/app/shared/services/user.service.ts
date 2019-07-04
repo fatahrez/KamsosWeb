@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ApiService } from './api.service';
 import { HttpClient } from '@angular/common/http';
-import { map, catchError } from 'rxjs/operators';
+import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -24,12 +24,15 @@ export class UserService {
     this.isAuthenticatedSubject.next(true);
   }
 
-  // attemptAuth(type, credentials): Observable<User>{
-  //   let route = (type === 'login') ? '/login' : '';
-  //   return this.apiService.post<User>("/users" + route, {user: credentials})
-  //   .pipe(
-  //     catchError(this.handke)
-  //   )
-  // }
+  attemptAuth(type, credentials): Observable<User>{
+    let route = (type === 'login') ? '/login' : '';
+    return this.apiService.post<User>("/users" + route, {user: credentials})
+    .pipe(
+      tap(data => {
+        this.setAuth(data.user);
+        return data;
+      })
+    );
+  }
 
 }
