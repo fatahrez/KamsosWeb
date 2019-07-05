@@ -60,4 +60,10 @@ export class UserService {
     return this.currentUserSubject.value;
   }
 
+  purgeAuth(){
+    this.jwtService.destroyToken();
+    this.currentUserSubject.next({} as User);
+    this.isAuthenticatedSubject.next(false);
+  }
+
 }
