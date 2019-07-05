@@ -3,8 +3,8 @@ import { HttpInterceptor, HttpEvent, HttpHandler, HttpRequest } from '@angular/c
 import { Observable } from 'rxjs';
 import { JwtService } from '../services';
 
-@Injectable({providedIn: 'root'})
-export class HeaderInterceptor implements HttpInterceptor {
+@Injectable()
+export class HttpTokenInterceptor implements HttpInterceptor {
     constructor(private jwtService: JwtService){}
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
@@ -21,6 +21,8 @@ export class HeaderInterceptor implements HttpInterceptor {
 
         const request = req.clone({setHeaders: headersConfig});
 
-        return next.handle(req);
+        return Observable.create((observer: any)=>{
+            next.handle(req);
+        }) 
     }
 }

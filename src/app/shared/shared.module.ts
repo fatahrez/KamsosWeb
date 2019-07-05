@@ -4,7 +4,9 @@ import { ListErrorsComponent } from './list-errors/list-errors.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
+import { HttpTokenInterceptor } from './interceptors/http.token.interceptor';
 // import { FooterComponent } from './layout/footer/footer.component';
 // import { HeaderComponent } from './layout/header/header.component';
 
@@ -17,7 +19,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     CommonModule,
@@ -26,6 +28,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     HttpClientModule,
     ListErrorsComponent,
     RouterModule
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true, },
   ]
 })
 export class SharedModule { }
