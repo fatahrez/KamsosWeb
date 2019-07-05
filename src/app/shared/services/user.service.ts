@@ -24,7 +24,20 @@ export class UserService {
     private jwtService: JwtService
   ) { }
 
+  populate() {
+    if(this.jwtService.getToken()){
+      this.apiService.get('/auth')
+        .subscribe(
+          data => this.setAuth(data.user),
+          err => this.purgeAuth()
+        );
+    } else{
+      this.purgeAuth();
+    }
+  }
+
   setAuth(user: User){
+    this.jwtService.saveToken(user.token);
     this.currentUserSubject.next(user);
     this.isAuthenticatedSubject.next(true);
   }
