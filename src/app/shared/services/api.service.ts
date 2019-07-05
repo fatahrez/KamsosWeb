@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpHeaders, HttpClient, HttpParams, HttpResponse } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { tap, map, catchError } from 'rxjs/operators';
 import { JwtService } from './jwt.service';
 
@@ -16,7 +16,12 @@ export class ApiService {
   ) { }
 
   private formatError(error: any){
-    return Observable.throw(error.json())
+    return throwError(error.json())
+  }
+
+  get(path: string, params: HttpParams = new HttpParams()): Observable<any>{
+    return this.http.get(`${environment.api_url}${path}`, {params})
+    .pipe(catchError(this.formatError));
   }
 
   post(path: string, body: Object = {}):  Observable<any> {

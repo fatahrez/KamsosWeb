@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { ApiService } from './api.service';
+import { BehaviorSubject, Observable, ReplaySubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { tap } from 'rxjs/operators';
+
+import { ApiService } from './api.service';
+import { JwtService } from './jwt.service';
 import { User } from '../models';
 import { distinctUntilChanged, map } from 'rxjs/operators';
 
@@ -11,15 +12,16 @@ import { distinctUntilChanged, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UserService {
-  private currentUserSubject = new BehaviorSubject<User>(new User());
+  private currentUserSubject = new BehaviorSubject<User>({} as User);
   public currentUser = this.currentUserSubject.asObservable().pipe(distinctUntilChanged());
 
-  private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
+  private isAuthenticatedSubject = new ReplaySubject<boolean>(1);
   public isAuthenticated = this.isAuthenticatedSubject.asObservable();
 
   constructor(
     private apiService: ApiService,
-    private http: HttpClient
+    private http: HttpClient,
+    private jwtService: JwtService
   ) { }
 
   setAuth(user: User){
