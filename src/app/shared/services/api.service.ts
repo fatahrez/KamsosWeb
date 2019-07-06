@@ -14,14 +14,6 @@ export class ApiService {
     private http: HttpClient,
     private jwtService: JwtService
   ) { }
-  
-  private setHeaders(): HttpHeaders {
-    let headersConfig = {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    };
-    return new HttpHeaders(headersConfig);
-  }
 
   private formatError(error: any){
     return throwError(error.json())
@@ -33,8 +25,8 @@ export class ApiService {
   }
 
   post(path: string, body: Object = {}):  Observable<any> {
-    return this.http.post(`${environment.api_url}${path}`, JSON.stringify(body), { headers: this.setHeaders() }).pipe(
+    return this.http.post(`${environment.api_url}${path}`, JSON.stringify(body)).pipe(
         catchError(this.formatError)
-    );  
+    );
   }
 }
