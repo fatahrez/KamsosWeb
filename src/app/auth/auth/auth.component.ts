@@ -42,9 +42,9 @@ export class AuthComponent implements OnInit {
 
   submitForm() {
     this.isSubmitting = true;
-    this.errors = new Errors();
+    this.errors = {errors: {}};
 
-    let credentials = this.authForm.value;
+    const credentials = this.authForm.value;
     console.log(credentials);
     this.userService.attemptAuth(this.authType, credentials)
     .subscribe(
@@ -53,7 +53,7 @@ export class AuthComponent implements OnInit {
         this.errors = err;
         this.isSubmitting = false;
       }
-    )
+    );
 
   }
 }
