@@ -12,12 +12,14 @@ import { HttpTokenInterceptor } from './interceptors/http.token.interceptor';
 
 @NgModule({
   declarations: [
-    // FooterComponent, 
+    // FooterComponent,
     // HeaderComponent
     ListErrorsComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
   ],

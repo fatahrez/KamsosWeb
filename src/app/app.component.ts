@@ -10,7 +10,9 @@ import { UserService } from './shared/services';
 export class AppComponent implements OnInit{
   title = 'Kamsos-Web';
 
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService
+  ) {}
 
   ngOnInit(){
     this.userService.populate();

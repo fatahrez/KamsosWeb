@@ -10,10 +10,10 @@ import { HomeModule } from './home/home.module';
 import { AuthModule } from './auth/auth.module';
 
 import {
+  ApiService,
   SharedModule,
   FooterComponent,
   HeaderComponent,
-  ApiService,
   UserService,
   JwtService,
   // HttpTokenInterceptor
@@ -29,17 +29,14 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     HeaderComponent
   ],
   imports: [
-    // CommonModule,
     BrowserModule,
     AppRoutingModule,
     AuthModule,
     SharedModule,
-    HomeModule, 
+    HomeModule,
     rootRouting,
-    // HttpClientModule
   ],
   providers: [
-    // { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true},
     ApiService,
     UserService,
     JwtService
