@@ -1,3 +1,3 @@
-export class Errors {
+export Interface Errors {
     errors: {[key:string]: string} = {};
 }

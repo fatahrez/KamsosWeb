@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Injector } from "@angular/core";
 import { HttpInterceptor, HttpEvent, HttpHandler, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -22,6 +22,6 @@ export class HttpTokenInterceptor implements HttpInterceptor {
 
         const request = req.clone({setHeaders: headersConfig});
 
-        return next.handle(req);
+        return next.handle(request);
     }
 }
