@@ -4,6 +4,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AuthComponent } from './auth/auth.component';
 import { SharedModule } from '../shared';
+import { MaterialModule } from '../material';
 
 const authRouting: ModuleWithProviders = RouterModule.forChild([
   {
@@ -22,7 +23,8 @@ const authRouting: ModuleWithProviders = RouterModule.forChild([
     authRouting,
     SharedModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
   ],
 
   providers:[]
