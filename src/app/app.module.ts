@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // import { HttpClientModule } from '@angular/common/http';
 // import { CommonModule } from '@angular/common';
 
@@ -8,12 +9,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { AuthModule } from './auth/auth.module';
+import { MaterialModule } from './material';
 
 import {
+  ApiService,
   SharedModule,
   FooterComponent,
   HeaderComponent,
-  ApiService,
   UserService,
   JwtService,
   // HttpTokenInterceptor
@@ -29,17 +31,16 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     HeaderComponent
   ],
   imports: [
-    // CommonModule,
     BrowserModule,
     AppRoutingModule,
     AuthModule,
+    BrowserAnimationsModule,
     SharedModule,
-    HomeModule, 
+    HomeModule,
+    MaterialModule,
     rootRouting,
-    // HttpClientModule
   ],
   providers: [
-    // { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true},
     ApiService,
     UserService,
     JwtService
