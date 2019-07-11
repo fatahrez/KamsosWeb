@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { ActivatedRoute, Router } from '@angular/router';
 import { Errors, UserService} from '../../shared';
 
-@Component({    
+@Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css']
@@ -14,7 +14,7 @@ export class AuthComponent implements OnInit {
   title: String = '';
   isSubmitting: boolean = false;
   authForm: FormGroup;
-  errors: Errors = new Errors();
+  errors: Errors = {errors: {}};
 
   constructor(
     private route: ActivatedRoute,
@@ -37,14 +37,14 @@ export class AuthComponent implements OnInit {
          this.authForm.addControl('username', new FormControl('', Validators.required));
        }
      });
-     
+
    }
 
   submitForm() {
     this.isSubmitting = true;
-    this.errors = new Errors();
+    this.errors = {errors: {}};
 
-    let credentials = this.authForm.value;
+    const credentials = this.authForm.value;
     console.log(credentials);
     this.userService.attemptAuth(this.authType, credentials)
     .subscribe(
@@ -53,7 +53,7 @@ export class AuthComponent implements OnInit {
         this.errors = err;
         this.isSubmitting = false;
       }
-    )
-    
+    );
+
   }
 }

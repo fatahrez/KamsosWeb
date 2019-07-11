@@ -1,9 +1,10 @@
 import { Injectable } from "@angular/core";
 import { HttpInterceptor, HttpEvent, HttpHandler, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
 import { JwtService } from '../services';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class HttpTokenInterceptor implements HttpInterceptor {
     constructor(private jwtService: JwtService){}
 
@@ -21,8 +22,6 @@ export class HttpTokenInterceptor implements HttpInterceptor {
 
         const request = req.clone({setHeaders: headersConfig});
 
-        return Observable.create((observer: any)=>{
-            next.handle(req);
-        }) 
+        return next.handle(req);
     }
 }

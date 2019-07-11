@@ -7,19 +7,23 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { HttpTokenInterceptor } from './interceptors/http.token.interceptor';
+import { MaterialModule } from '../material';
 // import { FooterComponent } from './layout/footer/footer.component';
 // import { HeaderComponent } from './layout/header/header.component';
 
 @NgModule({
   declarations: [
-    // FooterComponent, 
+    // FooterComponent,
     // HeaderComponent
     ListErrorsComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
+    MaterialModule
   ],
   exports: [
     CommonModule,
