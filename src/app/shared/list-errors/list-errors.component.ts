@@ -1,5 +1,5 @@
 import { Component, Input} from '@angular/core';
-import { Errors } from '../models';
+import { Errors } from '../core';
 
 @Component({
   selector: 'app-list-errors',
@@ -11,13 +11,8 @@ export class ListErrorsComponent {
 
   @Input()
   set errors(errorList: Errors) {
-    this.formattedErrors = [];
-
-    if(errorList.errors){
-      for(let field in errorList.errors){
-        this.formattedErrors.push(`${field} ${errorList.errors[field]}`);
-      }
-    }
+    this.formattedErrors = Object.keys(errorList.errors || {})
+    .map(key => `${key}${errorList.errors[key]}`);
   };
 
   get errorList() { return this.formattedErrors;}
