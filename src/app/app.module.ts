@@ -12,26 +12,24 @@ import { AuthModule } from './auth/auth.module';
 import { MaterialModule } from './material';
 
 import {
-  ApiService,
+  // ApiService,
   SharedModule,
   FooterComponent,
   HeaderComponent,
-  UserService,
-  JwtService,
+  // UserService,
+  // JwtService,
   // HttpTokenInterceptor
 } from './shared';
+import { CoreModule } from './core/core.module';
 // import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FooterComponent,
-    HeaderComponent
-  ],
+  declarations: [ AppComponent, FooterComponent, HeaderComponent ],
   imports: [
     BrowserModule,
+    CoreModule,
     AppRoutingModule,
     AuthModule,
     BrowserAnimationsModule,
@@ -41,9 +39,9 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     rootRouting,
   ],
   providers: [
-    ApiService,
-    UserService,
-    JwtService
+    // ApiService,
+    // UserService,
+    // JwtService
   ],
   bootstrap: [AppComponent]
 })
