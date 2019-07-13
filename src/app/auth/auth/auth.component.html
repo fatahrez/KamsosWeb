@@ -2,7 +2,9 @@
   <div class="container page">
     <div class="row">
 
-      <div class="col-md-6 offset-md-3 col-xs-12">
+      <div class="card authCard p-4 col-md-5 offset-md-3 col-xs-12">
+
+
         <h1 class="text-xs-center">{{ title }}</h1>
         <p class="text-xs-center">
           <a [routerLink]="['/login']" *ngIf="authType == 'register'">Have an account?</a>
@@ -13,28 +15,66 @@
 
         <form [formGroup]="authForm" (ngSubmit)="submitForm()">
           <fieldset [disabled]="isSubmitting">
-            <fieldset class="form-group">
-              <input formControlName="username" placeholder="Username" class="form-control form-control-lg" type="text" *ngIf="authType == 'register'" />
-            </fieldset>
 
-            <mat-form-field appearance="outline">
-              <mat-label>Outline form field</mat-label>
-              <input matInput placeholder="Placeholder">
+            <!-- <fieldset class="form-group">
+              <input formControlName="username" placeholder="Username" class="form-control form-control-lg" type="text" *ngIf="authType == 'register'" />
+            </fieldset> -->
+
+            <mat-form-field class="form-group" appearance="outline">
+              <mat-label>Username</mat-label>
+              <input matInput formControlName="username" type="text" *ngIf="authType == 'register'">
               <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-              <mat-hint>Hint</mat-hint>
             </mat-form-field>
 
-            <fieldset class="form-group">
+            <br>
+
+            <mat-form-field class="form-group" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" type="text" required>
+              <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+            </mat-form-field>
+
+
+
+            <!-- <fieldset class="form-group">
               <input formControlName="email" placeholder="Email" class="form-control form-control-lg" type="text" />
-            </fieldset>
+            </fieldset> -->
 
-            <fieldset class="form-group">
-              <input formControlName="password" placeholder="Password" class="form-control form-control-lg" type="password" />
-            </fieldset>
 
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input matInput formControlName="password" [type]="hide ? 'text' : 'password'" type="password" required>
+                  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Confirm Password</mat-label>
+                  <input matInput  [type]="hide ? 'text' : 'password'" type="password" required>
+                  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                  <!-- show error if passwords dont match -->
+                  <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                </mat-form-field>
+              </div>
+            </div>
+
+            <!-- <fieldset class="form-group">
+            <input formControlName="password" placeholder="Password" class="form-control form-control-lg" type="password" />
+          </fieldset> -->
+
+            <div class="text-right">
+              <button mat-flat-button type="submit">
+                {{ title }}
+              </button>
+            </div>
+
+
+            <!--
             <button class="btn btn-lg btn-primary pull-xs-right" type="submit">
-              {{ title }}
-            </button>
+            </button> -->
+
           </fieldset>
 
         </form>

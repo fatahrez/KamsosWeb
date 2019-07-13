@@ -1,0 +1,11 @@
+.authCard{
+  border: none;
+  box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.1);
+}
+button{
+  color: #fff;
+  background-color: #166d9e
+}
+.mat-form-field{
+        width: 100%
+}
