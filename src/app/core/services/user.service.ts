@@ -26,7 +26,7 @@ export class UserService {
 
   populate() {
     if(this.jwtService.getToken()){
-      this.apiService.get('/au')
+      this.apiService.get('/')
         .subscribe(
           data => this.setAuth(data.user),
           err => this.purgeAuth()
@@ -43,7 +43,7 @@ export class UserService {
   }
 
   attemptAuth(type, credentials): Observable<User>{
-    let route = (type === 'login') ? '/login' : '';
+    let route = (type === 'login') ? '/login' : '/createpastoralist';
     return this.apiService.post("/auth" + route, {user: credentials})
     .pipe(
       map(

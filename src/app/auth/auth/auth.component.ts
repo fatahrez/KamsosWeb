@@ -49,7 +49,7 @@ export class AuthComponent implements OnInit {
     console.log(credentials);
     this.userService.attemptAuth(this.authType, credentials)
     .subscribe(
-      data => this.router.navigateByUrl('/createpastoralist'),
+      data => this.router.navigateByUrl('/'),
       err => {
         this.errors = err;
         this.isSubmitting = false;
