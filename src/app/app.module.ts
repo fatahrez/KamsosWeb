@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { AuthModule } from './auth/auth.module';
 import { MaterialModule } from './material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import {
   // ApiService,
@@ -36,6 +38,8 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     SharedModule,
     HomeModule,
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
     rootRouting,
   ],
   providers: [
