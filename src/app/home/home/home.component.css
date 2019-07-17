@@ -1,29 +1,119 @@
 .nav-link {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .example-button-row button,
 .example-button-row a {
   margin-right: 8px;
 }
-.home-page{
+
+.welcome {
+  background-image: linear-gradient(120deg,#98623c 20%, #0003, transparent), url("src/assets/images/animal.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: bottom ;
+  background-attachment: fixed;
+  color: #fff;
+  height: 90vh;
+}
+.logo{
 
 }
-#award_symbol{
+
+#award_symbol {
   width: 110px;
   height: 110px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 50px 30px 10px rgba(0, 0, 0, 0.5);
 }
-#cow{
+
+#cow {
   width: 50px;
   height: 50px;
   position: relative;
   left: -80px;
 }
-.logo p{
+
+.logoCont span {
   font-family: 'Righteous', cursive;
   font-size: 30px;
-  color: #c35c12;
 }
-p{
+
+p {
   letter-spacing: 1px;
+}
+.infoCont1 p{
+  font-size: 24px;
+}
+.learnMoreBtn{
+  width: 300px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all .3s ease;
+}
+.learnMoreBtn:hover{
+  box-shadow: 0 40px 30px 1px rgba(0, 0, 0, 0.6);
+}
+
+
+.downArrow{
+	bottom: -20%;
+	left: 50%;
+}
+.bounce {
+	-moz-animation: bounce 3s infinite;
+	-webkit-animation: bounce 3s infinite;
+	animation: bounce 3s infinite;
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
 }
