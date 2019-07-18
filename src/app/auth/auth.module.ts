@@ -5,6 +5,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AuthComponent } from './auth/auth.component';
 import { SharedModule } from '../shared';
 import { MaterialModule } from '../material';
+import { NoAuthGuardService } from './no-auth-guard.service';
 
 const authRouting: ModuleWithProviders = RouterModule.forChild([
   {
@@ -27,6 +28,8 @@ const authRouting: ModuleWithProviders = RouterModule.forChild([
     MaterialModule
   ],
 
-  providers:[]
+  providers:[
+    NoAuthGuardService
+  ]
 })
 export class AuthModule { }
