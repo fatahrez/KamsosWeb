@@ -18,7 +18,7 @@
               <input formControlName="username" placeholder="Username" class="form-control form-control-lg" type="text" *ngIf="authType == 'register'" />
             </fieldset> -->
 
-            <mat-form-field appearance="outline" *ngIf="authType == 'register'">
+            <mat-form-field class="form-group" appearance="outline" *ngIf="authType == 'register'">
               <mat-label>Username</mat-label>
               <input matInput formControlName="username"  type="text"  required>
               <mat-icon matSuffix>account_circle</mat-icon>
@@ -26,7 +26,7 @@
 
             <br>
 
-            <mat-form-field  appearance="outline">
+            <mat-form-field class="form-group" appearance="outline">
               <mat-label>Email</mat-label>
               <input matInput formControlName="email" type="text" required>
               <mat-icon matSuffix>email</mat-icon>
@@ -39,7 +39,7 @@
               <input formControlName="email" placeholder="Email" class="form-control form-control-lg" type="text" />
             </fieldset> -->
 
-              <mat-form-field  appearance="outline" *ngIf="authType == 'login'">
+              <mat-form-field  class="form-group" appearance="outline" *ngIf="authType == 'login'">
                 <mat-label>Password</mat-label>
                 <input matInput formControlName="password" [type]="hide ? 'text' : 'password'" type="password" required>
                 <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
