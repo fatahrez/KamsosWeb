@@ -10,11 +10,13 @@ import { NoAuthGuardService } from './no-auth-guard.service';
 const authRouting: ModuleWithProviders = RouterModule.forChild([
   {
     path: 'login',
-    component: AuthComponent
+    component: AuthComponent,
+    canActivate: [NoAuthGuardService]
   },
   {
     path: 'register',
-    component: AuthComponent
+    component: AuthComponent,
+    canActivate: [NoAuthGuardService]
   }
 ]);
 

@@ -9,6 +9,7 @@ import { ListErrorsComponent } from './list-errors/list-errors.component';
 
 // import { HttpTokenInterceptor } from './interceptors/http.token.interceptor';
 import { MaterialModule } from '../material';
+import { ShowAuthedDirective } from './show-authed.directive';
 // import { FooterComponent } from './layout/footer/footer.component';
 // import { HeaderComponent } from './layout/header/header.component';
 
@@ -16,7 +17,8 @@ import { MaterialModule } from '../material';
   declarations: [
     // FooterComponent,
     // HeaderComponent
-    ListErrorsComponent
+    ListErrorsComponent,
+    ShowAuthedDirective
   ],
   imports: [
     CommonModule,
