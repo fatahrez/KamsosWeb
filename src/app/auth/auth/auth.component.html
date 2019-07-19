@@ -41,8 +41,9 @@
 
               <mat-form-field  class="form-group" appearance="outline" *ngIf="authType == 'login'">
                 <mat-label>Password</mat-label>
-                <input matInput formControlName="password" [type]="hide ? 'text' : 'password'" type="password" required>
-                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                <input matInput formControlName="password"  [type]="hide ? 'password' : 'text'" type="password" required>
+                <mat-icon matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  {{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
               </mat-form-field>
 
 
@@ -51,7 +52,7 @@
 
                   <mat-form-field  appearance="outline">
                     <mat-label>Password</mat-label>
-                    <input matInput formControlName="password" [type]="hide ? 'text' : 'password'" type="password" required>
+                    <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" type="password" required>
                   </mat-form-field>
 
               </div>
@@ -61,7 +62,7 @@
 
                 <mat-form-field  appearance="outline">
                   <mat-label>Confirm Password</mat-label>
-                  <input matInput [type]="hide ? 'text' : 'password'" type="password" >
+                  <input matInput [type]="hide ? 'password' : 'text'" type="password" >
                   <!-- show error if passwords dont match -->
                   <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
                 </mat-form-field>
@@ -69,7 +70,8 @@
               </div>
 
               <div class="visibilityIcon col-md-2 mt-4 ">
-                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                <mat-icon matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  {{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
 
               </div>
 
