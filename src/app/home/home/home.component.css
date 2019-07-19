@@ -8,19 +8,21 @@
 }
 
 .welcome {
-  background-image: linear-gradient(120deg,#98623c 20%, #0003, transparent), url("src/assets/images/animal.jpg");
+  background-image: linear-gradient(120deg, #98623c 20%, #0003, transparent), url("src/assets/images/animal.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position: bottom ;
+  background-position: bottom;
   background-attachment: fixed;
   color: #fff;
   height: 90vh;
 }
-.logo{
 
+.logo {
+  margin: 0;
+  padding: 0;
 }
 
 #award_symbol {
@@ -38,65 +40,106 @@
   left: -80px;
 }
 
-.logoCont span {
-  font-family: 'Righteous', cursive;
-  font-size: 30px;
+.logo span {
+  font-size: 70px;
+  font-weight: 600;
 }
 
 p {
   letter-spacing: 1px;
 }
-.infoCont1 p{
+
+.infoCont1 p {
   font-size: 24px;
 }
-.learnMoreBtn{
+
+.learnMoreBtn {
   width: 300px;
   border-radius: 20px;
   font-weight: 600;
   transition: all .3s ease;
 }
-.learnMoreBtn:hover{
+
+.learnMoreBtn:hover {
   box-shadow: 0 40px 30px 1px rgba(0, 0, 0, 0.6);
 }
 
+.downloadApp {
+  height: 70vh;
+}
 
-.downArrow{
-	bottom: -20%;
-	left: 50%;
+.downloadApp h1 {
+  font-size: 60px;
+  letter-spacing: 1px;
 }
+
+.downloadApp .appName {}
+
+.downloadApp .appDownloadBtn {
+  width: 200px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all .3s ease;
+}
+
+.downloadApp .appDownloadBtn:hover {
+  box-shadow: 0 40px 30px 1px rgba(0, 0, 0, 0.6);
+}
+
+.downloadApp button span {
+  font-size: 40px;
+}
+
+.features {}
+
+/* ************************************* */
+/* ARROW ANIMATION */
+/* ************************************* */
+.downArrow {
+  bottom: -20%;
+  left: 50%;
+}
+
 .bounce {
-	-moz-animation: bounce 3s infinite;
-	-webkit-animation: bounce 3s infinite;
-	animation: bounce 3s infinite;
+  -moz-animation: bounce 3s infinite;
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce 3s infinite;
 }
+
 @-moz-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -moz-transform: translateY(0);
     transform: translateY(0);
   }
+
   40% {
     -moz-transform: translateY(-30px);
     transform: translateY(-30px);
   }
+
   60% {
     -moz-transform: translateY(-15px);
     transform: translateY(-15px);
   }
 }
+
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   40% {
     -webkit-transform: translateY(-30px);
     transform: translateY(-30px);
   }
+
   60% {
     -webkit-transform: translateY(-15px);
     transform: translateY(-15px);
   }
 }
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -moz-transform: translateY(0);
@@ -104,12 +147,14 @@ p {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   40% {
     -moz-transform: translateY(-30px);
     -ms-transform: translateY(-30px);
     -webkit-transform: translateY(-30px);
     transform: translateY(-30px);
   }
+
   60% {
     -moz-transform: translateY(-15px);
     -ms-transform: translateY(-15px);
