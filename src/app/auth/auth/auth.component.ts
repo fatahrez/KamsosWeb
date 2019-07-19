@@ -16,6 +16,7 @@ export class AuthComponent implements OnInit {
   isSubmitting: boolean = false;
   authForm: FormGroup;
   errors: Errors = {errors: {}};
+  hide = true;
 
   constructor(
     private route: ActivatedRoute,
