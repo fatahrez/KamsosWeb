@@ -108,6 +108,13 @@ p {
 .features h2{
   font-size: 30px;
 }
+
+.features .card{
+  padding: 10px 0 0 10px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #fff5;
+}
 .features .row img{
   width: 70px;
   height: 70px;
