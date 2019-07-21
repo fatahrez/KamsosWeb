@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  constructor() { }
+  constructor(
+    private userService: UserService
+  ) { }
+
+  logout(){
+    this.userService.purgeAuth();
+    this.router.navigateByUrl('/');
+  }
 
 }
