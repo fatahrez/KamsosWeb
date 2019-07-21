@@ -6,7 +6,8 @@
 .example-button-row a {
   margin-right: 8px;
 }
-hr{
+
+hr {
   width: 80%;
 }
 
@@ -20,7 +21,6 @@ hr{
   background-position: bottom;
   background-attachment: fixed;
   color: #fff;
-  height: 90vh;
 }
 
 .logo {
@@ -67,8 +67,11 @@ p {
   box-shadow: 0 40px 30px 1px rgba(0, 0, 0, 0.6);
 }
 
+/* ************************************* */
+/* downloadApp section */
+/* ************************************* */
 .downloadApp {
-  height: 70vh;
+
 }
 
 .downloadApp h1 {
@@ -93,27 +96,49 @@ p {
   font-size: 40px;
 }
 
-.features {}
+/* ************************************* */
+/* features section */
+/* ************************************* */
+.features {
+  background-image: linear-gradient(120deg, #0009 80%, #0007), url("src/assets/images/architecture-building.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  color: #fff;
+}
 
-.features h2{
+.features h2 {
   font-size: 30px;
 }
-.features .row img{
+
+.features .card {
+  margin-bottom: 20px;
+  padding: 10px 0 0 10px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #fff5;
+}
+
+.features .row img {
   width: 70px;
   height: 70px;
 }
+
 .features .row h3 {
   font-weight: bold;
 }
 
+.Specialists {}
 
-.Specialists{
-
-}
-.Specialists .row img{
+.Specialists .row img {
   width: 150px;
   height: 150px;
 }
+
 /* ************************************* */
 /* ARROW ANIMATION */
 /* ************************************* */
