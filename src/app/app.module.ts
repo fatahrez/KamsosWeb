@@ -8,6 +8,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
+import { AboutModule } from './about/about.module';
 import { AuthModule } from './auth/auth.module';
 import { MaterialModule } from './material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -37,6 +38,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     BrowserAnimationsModule,
     SharedModule,
     HomeModule,
+    AboutModule,
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,

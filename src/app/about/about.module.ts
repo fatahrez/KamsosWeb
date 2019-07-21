@@ -7,7 +7,7 @@ import { MaterialModule } from '../material';
 
 const aboutRouting: ModuleWithProviders = RouterModule.forChild([
   {
-    path: '/about',
+    path: 'about',
     component: AboutComponent
   }
 ]);
