@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { UserService } from '..core';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +11,8 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) { }
 
   logout(){
