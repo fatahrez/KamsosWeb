@@ -38,12 +38,6 @@
           Learn
         </a>
       </li> -->
-
-      <li class="nav-item mx-1">
-          <a class="nav-link" routerLinkActive="active" >
-            Download
-          </a>
-      </li>
       <li class="nav-item mx-1">
         <a class="nav-link" routerLink="/login" routerLinkActive="active">
           Sign in
@@ -54,6 +48,12 @@
         <a class="nav-link" routerLink="/register" routerLinkActive="active">
           Sign up
         </a>
+      </li>
+
+      <li class="nav-item mx-1">
+          <button  routerLinkActive="active" class="btn btn-outline-success">
+            Download
+          </button>
       </li>
       <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -74,7 +74,7 @@
     <ul *appShowAuthed="true" class="navbar-nav">
       <li class="nav-item mx-1">
         <a class="nav-link" routerLinkActive="active">
-          Welcome
+          Home
         </a>
       </li>
 
