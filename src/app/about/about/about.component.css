@@ -1,0 +1,10 @@
+.Specialists {}
+
+  .Specialists .info p{
+    font-size: 20px;
+  }
+
+.Specialists .row img {
+  width: 150px;
+  height: 150px;
+}
