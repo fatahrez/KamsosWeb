@@ -1,33 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-// import { HttpClientModule } from '@angular/common/http';
-// import { CommonModule } from '@angular/common';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';mon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
 import { ContactModule } from './contact/contact.module';
+import { ResourcesModule } from './resources/resources.module';
 import { AuthModule } from './auth/auth.module';
+
 import { MaterialModule } from './material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 import {
-  // ApiService,
   SharedModule,
   FooterComponent,
   HeaderComponent,
-  // UserService,
-  // JwtService,
-  // HttpTokenInterceptor
 } from './shared';
+
 import { CoreModule } from './core/core.module';
-// import { ContactComponent } from './contact/contact.component';
-// import { ResourcesComponent } from './resources/resources.component';
-// import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 
@@ -43,16 +36,13 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     HomeModule,
     AboutModule,
     ContactModule,
+    ResourcesModule,
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
     rootRouting,
   ],
-  providers: [
-    // ApiService,
-    // UserService,
-    // JwtService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
