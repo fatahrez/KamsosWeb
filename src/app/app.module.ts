@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
+import { ContactModule } from './contact/contact.module';
 import { AuthModule } from './auth/auth.module';
 import { MaterialModule } from './material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -24,14 +25,14 @@ import {
   // HttpTokenInterceptor
 } from './shared';
 import { CoreModule } from './core/core.module';
-import { ContactComponent } from './contact/contact.component';
-import { ResourcesComponent } from './resources/resources.component';
+// import { ContactComponent } from './contact/contact.component';
+// import { ResourcesComponent } from './resources/resources.component';
 // import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 
 @NgModule({
-  declarations: [ AppComponent, FooterComponent, HeaderComponent, ContactComponent, ResourcesComponent ],
+  declarations: [ AppComponent, FooterComponent, HeaderComponent ],
   imports: [
     BrowserModule,
     CoreModule,
@@ -41,6 +42,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     SharedModule,
     HomeModule,
     AboutModule,
+    ContactModule,
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
