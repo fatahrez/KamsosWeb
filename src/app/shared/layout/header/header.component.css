@@ -19,9 +19,9 @@ nav .nav-link:after {
   position: absolute;
   left: 10px;
   bottom: 0px;
-  width: 30px;
-  height: 4px;
-  background: #000;
+  width: 40px;
+  height: 5px;
+  background: green;
   content: "";
   opacity: 0;
   border-radius: 20px;
@@ -32,10 +32,23 @@ nav .nav-link:hover:after {
   opacity: 1;
   transform: translateX(0px);
 }
+nav .navbar-brand{
+  display: inline-block;
+}
+nav .btn{
+  font-size: 15px;
+  font-weight: 600;
+}
 .logo img{
   width: 50px;
   height: 50px;
-  
+
+}
+.logo span {
+  color: green;
+  font-size: 24px;
+  font-weight: 600;
+
 }
 
 /* #award_symbol{
