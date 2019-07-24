@@ -24,12 +24,14 @@ import {
   // HttpTokenInterceptor
 } from './shared';
 import { CoreModule } from './core/core.module';
+import { ContactComponent } from './contact/contact.component';
+import { ResourcesComponent } from './resources/resources.component';
 // import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 
 @NgModule({
-  declarations: [ AppComponent, FooterComponent, HeaderComponent ],
+  declarations: [ AppComponent, FooterComponent, HeaderComponent, ContactComponent, ResourcesComponent ],
   imports: [
     BrowserModule,
     CoreModule,
