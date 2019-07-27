@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ShowAuthedDirective } from '../../shared';
 
 @Component({
   selector: 'app-home',
