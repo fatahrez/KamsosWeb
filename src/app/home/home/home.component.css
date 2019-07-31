@@ -12,7 +12,8 @@ hr {
 }
 
 .welcome {
-  background-image: linear-gradient(120deg, #98623c 20%, #0003, transparent), url("src/assets/images/animal.jpg");
+  /* background-image: linear-gradient(120deg, #98623c 20%, #0003, transparent), url("src/assets/images/animal.jpg"); */
+  background-image:  linear-gradient(to right bottom , #0008, #0003),url("src/assets/images/animal.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -53,7 +54,7 @@ hr {
 } */
 
 .logo span {
-  font-size: 90px;
+  font-size: 80px;
   font-weight: 600;
   margin-top: 40px;
 }

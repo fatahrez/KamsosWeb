@@ -1,0 +1,86 @@
+.contact {
+  background-image: linear-gradient(to right, #44CCA188, #00857766, #fff5), url("src/assets/images/design.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  color: #000;
+}
+
+iframe {
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contDetail {
+  background: linear-gradient(to right, #44CCA1, #00857799);
+}
+
+.contDetail img {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.social img:hover {
+  filter: brightness(80%);
+}
+
+.card {
+  border: none;
+  box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.1);
+}
+
+.emailForm h5 {
+  font-weight: 600;
+}
+
+.emailForm mat-form-field {
+  width: 100%;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: green !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: #000 !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: green !important;
+  ;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+::ng-deep .form-group, .submitBtn {
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
+  background-color: #166d9e;
+}

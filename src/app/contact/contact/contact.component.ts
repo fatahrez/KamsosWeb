@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-contact',
@@ -6,6 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  phone = '';
+  district = '';
+  textarea = '';
+
+  emailFormControl = new FormControl('', [
+   Validators.required,
+   Validators.email,
+ ]);
 
   constructor() { }
 

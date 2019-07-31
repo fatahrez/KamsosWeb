@@ -1,6 +1,159 @@
+<div class="contact">
+  <div class="container p-5">
+    <h3 class="text-center"><strong>Get in Touch with Us</strong></h3>
+    <p class="text-center mb-5">
+      <span><i class="fas fa-gem"></i></span>
+    </p>
+
+
+
+    <h5 class="text-center mb-5">Do you have a question or comment about our Livestock Care Services? <br> Drop us a Line or Email</h5>
+
+  </div>
+</div>
+
 <br>
-<br>
-<br>
-<br>
-<br>
-<p>contact works!</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+
+      <div class="mb-5">
+
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4010.4772935229894!2d39.65741031476801!3d-0.44567599967484456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMjYnNDQuNCJTIDM5wrAzOSczNC42IkU!5e1!3m2!1sen!2ske!4v1564567900036!5m2!1sen!2ske"
+           height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-6 emailForm">
+
+      <div class="card p-3">
+
+
+        <h5 class="mb-4">Send Us a message</h5>
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <mat-form-field>
+              <input matInput placeholder="First name" required>
+            </mat-form-field>
+          </div>
+
+          <div class="col-md-6">
+            <mat-form-field>
+              <input matInput placeholder="Other name">
+            </mat-form-field>
+          </div>
+
+        </div>
+
+        <br>
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <mat-form-field>
+              <input matInput placeholder="County / District" [(ngModel)]="district">
+              <button mat-button *ngIf="district" matSuffix mat-icon-button aria-label="Clear" (click)="district=''">
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+
+          <div class="col-md-6">
+            <mat-form-field>
+              <input matInput type="number" placeholder="Phone" [(ngModel)]="phone" required>
+              <button mat-button *ngIf="phone" matSuffix mat-icon-button aria-label="Clear" (click)="phone=''">
+                <mat-icon>close</mat-icon>
+              </button>
+              <mat-hint>Include area code <i>eg : '+254'</i> </mat-hint>
+            </mat-form-field>
+          </div>
+
+        </div>
+
+
+
+
+        <br>
+
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" [formControl]="emailFormControl" required>
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </form>
+
+        <br>
+
+        <mat-form-field>
+          <textarea matInput placeholder="Textarea" [(ngModel)]="textarea" required></textarea>
+          <button mat-button *ngIf="textarea" matSuffix mat-icon-button aria-label="Clear" (click)="textarea=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <br>
+
+        <div class="text-center">
+          <button mat-flat-button class="submitBtn" type="submit">
+            Send Message
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<br><br>
+
+<div class="contDetail py-5">
+
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <h4 class="mb-4"><strong>General Contact</strong></h4>
+        <p><img src="assets/images/maps-and-flags.svg"> 70100 Garissa County. <br>
+          Township, University Way 1176.</p>
+
+        <p> <img src="assets/images/telephone.svg">(254) 720-460-332</p>
+        <p> <img src="assets/images/email-filled-closed-envelope.svg"> kamsos.official(a)gmail.com</p>
+        <p> <img src="assets/images/calendar.svg"> <strong>Monday - Friday :</strong> 9:00 AM to 5:00 PM</p>
+      </div>
+
+
+      <div class="col-md-6 text-center">
+        <h4><strong>We are Social</strong> <br> Stay Connected with us for News & Notices</h4>
+
+
+        <div class="text-center social">
+          <div class="row">
+
+            <img src="assets/images/facebook.svg">
+            <img src="assets/images/twitter.svg">
+            <img src="assets/images/linkedin.svg">
+            <img src="assets/images/google-plus.svg">
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
