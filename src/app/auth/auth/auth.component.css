@@ -1,9 +1,12 @@
+.auth-page {}
+
 .rowAuth {
   display: flex;
   justify-content: center;
   align-items: center;
-  }.authCard {
+}
 
+.authCard {
   border: none;
   box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.1);
 }
@@ -15,6 +18,21 @@ button {
 
 .mat-form-field {
   width: 100%
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: #000 !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: #000 !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: #000 !important;
+  ;
 }
 
 .visibilityIcon {
