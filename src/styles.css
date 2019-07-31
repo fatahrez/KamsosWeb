@@ -10,4 +10,6 @@ html, body {
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
+  overflow-x: hidden;
+
 }
