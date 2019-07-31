@@ -1,6 +1,6 @@
 
 .aboutCont{
-  background-image: url("src/assets/images/Untitled design.png");
+  background-image:  linear-gradient(to right  , #44CCA188, #00857766, #fff5), url("src/assets/images/design.png");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
