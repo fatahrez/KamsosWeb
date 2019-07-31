@@ -79,7 +79,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-::ng-deep .form-group, .submitBtn {
+::ng-deep button {
   font-family: 'Quicksand', sans-serif;
   color: #fff;
   background-color: #166d9e;
