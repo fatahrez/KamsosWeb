@@ -1,0 +1,64 @@
+.container {
+  margin-top: 5%;
+}
+
+.lessonsIntro {}
+
+.lessonsIntro img {
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 20px 40px 5px rgba(0, 0, 0, 0.2);
+}
+
+.lessonsIntro button,
+.lessonsIntro button:active,
+.lessonsIntro button:focus {
+  font-weight: 600;
+  background-color: #0003;
+  border-radius: 20px;
+  outline: none !important;
+  border: 0 !important;
+}
+
+.lessonsIntro h3 {
+  color: #70885D;
+}
+
+p {
+  color: #0009;
+}
+
+.col-md-3 {
+  /* background-color: #000; */
+}
+
+.lessonsInfo {}
+
+.lessonsInfo .number {
+  font-size: 20px;
+  font-weight: 600;
+  width: 25px;
+  background-color: #44CCA1;
+  border-radius: 5px;
+}
+.lessonsInfo a,
+.lessonsInfo a:hover{
+  color: #000;
+  /* font-weight: 600; */
+}
+
+@media only screen and (max-width: 768px) {
+
+  .lessonsIntro img{
+    margin-bottom: 20%;
+  }
+  hr {
+    display: none;
+  }
+
+  .lessonsInfo .col-md-3 {
+    padding: 0 20px 0 20px ;
+    margin-bottom: 10%;
+  }
+}
