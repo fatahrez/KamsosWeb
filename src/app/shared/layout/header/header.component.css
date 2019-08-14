@@ -39,6 +39,13 @@ nav .btn{
   font-size: 15px;
   font-weight: 600;
 }
+
+nav img {
+  width: 50px;
+  height: 50px;
+  visibility: hidden;
+}
+
 .logo img{
   width: 50px;
   height: 50px;
@@ -61,3 +68,9 @@ nav .btn{
   position: relative;
   left: -38px;
 } */
+
+@media only screen and (max-width: 768px) {
+  nav img{
+    visibility: visible;
+  }
+}
