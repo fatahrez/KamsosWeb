@@ -25,26 +25,26 @@ export class UserService {
   ) { }
 
   populate() {
-    if(this.jwtService.getToken()){
-      this.apiService.get('/')
+    if (this.jwtService.getToken()) {
+      this.apiService.get('/auth/user')
         .subscribe(
           data => this.setAuth(data.user),
           err => this.purgeAuth()
         );
-    } else{
+    } else {
       this.purgeAuth();
     }
   }
 
-  setAuth(user: User){
+  setAuth(user: User) {
     this.jwtService.saveToken(user.token);
     this.currentUserSubject.next(user);
     this.isAuthenticatedSubject.next(true);
   }
 
-  attemptAuth(type, credentials): Observable<User>{
-    let route = (type === 'login') ? '/login' : '/createpastoralist';
-    return this.apiService.post("/auth" + route, {user: credentials})
+  attemptAuth(type, credentials): Observable<User> {
+    const route = (type === 'login') ? '/login' : '/createpastoralist';
+    return this.apiService.post('/auth' + route, {user: credentials})
     .pipe(
       map(
         data => {
@@ -55,11 +55,11 @@ export class UserService {
     );
   }
 
-  getCurrentUser(): User{
+  getCurrentUser(): User {
     return this.currentUserSubject.value;
   }
 
-  purgeAuth(){
+  purgeAuth() {
     this.jwtService.destroyToken();
     this.currentUserSubject.next({} as User);
     this.isAuthenticatedSubject.next(false);
