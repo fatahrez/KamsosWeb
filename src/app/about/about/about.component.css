@@ -1,6 +1,5 @@
-
-.aboutCont{
-  background-image:  linear-gradient(to right  , #44CCA188, #00857766, #fff5), url("src/assets/images/design.png");
+.aboutCont {
+  background-image: linear-gradient(to right, #44CCA188, #00857766, #fff5), url("src/assets/images/design.png");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -9,11 +8,17 @@
   background-position: center;
   color: #000;
 }
+
 .Specialists {}
 
-  .Specialists .info p{
-    font-size: 20px;
-  }
+ h3,  p {
+  color: #202124;
+}
+
+
+.Specialists .info p {
+  font-size: 20px;
+}
 
 .Specialists .row img {
   width: 150px;

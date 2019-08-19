@@ -19,8 +19,8 @@ hr {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position: bottom;
-  background-attachment: fixed;
+  background-position: right center;
+  /* background-attachment: fixed; */
   color: #fff;
 }
 
@@ -84,7 +84,12 @@ p {
 .downloadApp h1 {
   font-size: 50px;
   letter-spacing: 1px;
+  color: #202124;
 }
+.downloadApp p {
+  color: #3c4043;
+}
+
 
 .downloadApp .appName {}
 

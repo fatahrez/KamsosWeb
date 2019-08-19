@@ -11,7 +11,7 @@ nav .nav-link {
   padding: 10px 10px;
   position: relative;
   z-index: 0;
-  color: #000;
+  color: #202124;
   cursor: pointer;
 }
 
@@ -56,6 +56,10 @@ nav img {
   font-size: 24px;
   font-weight: 600;
 
+}
+.navbar-toggler img{
+  width: 30px;
+  height: 30px;
 }
 
 /* #award_symbol{
