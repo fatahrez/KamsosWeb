@@ -8,11 +8,18 @@
   background-position: center;
   color: #000;
 }
+h3 , h5{
+  color: #202124;
 
+}
+.contArea  img {
+  width: 50px;
+  height: 50px;
+}
 iframe {
   border-radius: 10px;
   width: 100%;
-  box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.2);
 }
 
 .contDetail {
@@ -23,6 +30,9 @@ iframe {
   width: 20px;
   height: 20px;
   margin-right: 20px;
+}
+.contDetail hr{
+  visibility: hidden;
 }
 
 .social {
@@ -44,7 +54,7 @@ iframe {
 .card {
   border: none;
   border-radius: 10px;
-  box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.2);
 }
 
 .emailForm h5 {
@@ -80,8 +90,14 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-::ng-deep button {
+::ng-deep   .submitBtn{
   font-family: 'Quicksand', sans-serif;
   color: #fff;
   background-color: #166d9e;
+}
+
+@media only screen and (max-width: 768px) {
+  .contDetail hr{
+    visibility: visible!important;
+  }
 }
