@@ -239,6 +239,10 @@ p {
   }
 }
 
+.example-card {
+  max-width: 400px;
+}
+
 @media only screen and (max-width: 1270px) {
   .downloadApp .screenshots img {
     display: none;
