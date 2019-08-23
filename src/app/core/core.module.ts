@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpTokenInterceptor } from './interceptors/http.token.interceptor';
 
-import{
+import {
   ApiService,
   JwtService,
+  RequestService,
   UserService,
 } from './services';
 
@@ -18,7 +19,8 @@ import{
     { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true},
     ApiService,
     JwtService,
-    UserService
+    UserService,
+    RequestService
   ]
 })
 export class CoreModule { }
