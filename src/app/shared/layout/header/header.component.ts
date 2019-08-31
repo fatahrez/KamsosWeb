@@ -15,7 +15,7 @@ export class HeaderComponent {
     private router: Router
   ) { }
 
-  logout(){
+  logout() {
     this.userService.purgeAuth();
     this.router.navigateByUrl('/');
   }
