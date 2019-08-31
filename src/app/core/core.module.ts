@@ -8,6 +8,7 @@ import {
   JwtService,
   RequestService,
   UserService,
+  VetsService,
 } from './services';
 
 @NgModule({
@@ -15,12 +16,13 @@ import {
   imports: [
     CommonModule
   ],
-  providers:[
+  providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true},
     ApiService,
     JwtService,
     UserService,
-    RequestService
+    RequestService,
+    VetsService
   ]
 })
 export class CoreModule { }

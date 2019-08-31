@@ -21,6 +21,7 @@ import {
 } from './shared';
 
 import { CoreModule } from './core/core.module';
+import {VetsModule} from './vets/vets.module';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 
@@ -40,6 +41,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    VetsModule,
     rootRouting,
   ],
   providers: [],
