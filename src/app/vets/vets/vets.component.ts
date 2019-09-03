@@ -28,12 +28,16 @@ export class VetsComponent implements OnInit {
           console.log(this.currentUser);
         }
       );
-      let that = this;
+
       this.getAllVets();
-      console.log(that.vets);
+      console.log(this.vets);
   }
 
   getAllVets() {
-    this.vetService.getAll().subscribe(vets => console.log(vets));
+    this.vetService.getAll().subscribe(vets => {
+      const _vets = vets["vet"]["results"];
+      this.vets =_vets;
+      console.log(_vets);
+    });
   }
 }
