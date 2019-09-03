@@ -18,7 +18,7 @@ export class AuthComponent implements OnInit {
   errors: Errors = {errors: {}};
 
   hide = true
-  
+
   constructor(
     private route: ActivatedRoute,
     private fb: FormBuilder,
@@ -48,7 +48,6 @@ export class AuthComponent implements OnInit {
     this.errors = {errors: {}};
 
     const credentials = this.authForm.value;
-    console.log(credentials);
     this.userService.attemptAuth(this.authType, credentials)
     .subscribe(
       data => this.router.navigateByUrl('/'),

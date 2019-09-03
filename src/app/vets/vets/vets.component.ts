@@ -25,19 +25,16 @@ export class VetsComponent implements OnInit {
       this.userService.currentUser.subscribe(
         (userData: User) => {
           this.currentUser = userData;
-          console.log(this.currentUser);
         }
       );
 
       this.getAllVets();
-      console.log(this.vets);
   }
 
   getAllVets() {
     this.vetService.getAll().subscribe(vets => {
       const _vets = vets["vet"]["results"];
       this.vets =_vets;
-      console.log(_vets);
     });
   }
 }
