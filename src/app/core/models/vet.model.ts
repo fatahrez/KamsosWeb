@@ -1,8 +1,9 @@
 export interface Vet {
-  firstName: string;
-  middleName: string;
-  lastName: string;
+  first_name: string;
+  middle_name: string;
+  last_name: string;
   username: string;
+  slug: string;
   email: string;
   telephoneNumber: string;
   county: string;

@@ -43,7 +43,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatProgressSpinnerModule
 
   ],
-  exports:[
+  exports: [
     MatButtonModule,
     MatFormFieldModule,
     LayoutModule,
