@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { VetsComponent } from './vets/vets.component';
 import { SharedModule } from '../shared';
-import { VetResolverComponent } from './vets/vet-resolver/vet-resolver.component';
 
 const vetsRouting: ModuleWithProviders = RouterModule.forChild([
   {
@@ -14,7 +13,7 @@ const vetsRouting: ModuleWithProviders = RouterModule.forChild([
 ]);
 
 @NgModule({
-  declarations: [VetsComponent, VetResolverComponent],
+  declarations: [VetsComponent],
   imports: [
     vetsRouting,
     CommonModule,
