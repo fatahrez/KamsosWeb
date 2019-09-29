@@ -30,7 +30,7 @@ const authRouting: ModuleWithProviders = RouterModule.forChild([
     MaterialModule
   ],
 
-  providers:[
+  providers: [
     NoAuthGuardService
   ]
 })
