@@ -23,7 +23,7 @@ import {
 import { CoreModule } from './core/core.module';
 import {VetsModule} from './vets/vets.module';
 
-const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: false });
+const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 
 @NgModule({
   declarations: [ AppComponent, FooterComponent, HeaderComponent ],
