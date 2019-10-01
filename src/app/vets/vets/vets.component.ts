@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {UserService, VetsService} from '../../core/services';
 import {User} from '../../core/models';
-import {map, tap} from 'rxjs/operators';
 import {Vet} from '../../core/models';
-import {log} from 'util';
 
 @Component({
   selector: 'app-vets',
@@ -33,8 +31,8 @@ export class VetsComponent implements OnInit {
 
   getAllVets() {
     this.vetService.getAll().subscribe(vets => {
-      const _vets = vets["vet"]["results"];
-      this.vets =_vets;
+      const vetz = vets["vet"]["results"];
+      this.vets = vetz;
     });
   }
 }
