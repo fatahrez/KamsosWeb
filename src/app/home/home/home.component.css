@@ -276,6 +276,7 @@
     display: none;
   }
   .downloadApp .appDownloadBtn {
+    font-size: 20px;
     width: 90%;
   }
 }
