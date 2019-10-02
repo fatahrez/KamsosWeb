@@ -11,7 +11,7 @@ nav .nav-link {
   padding: 10px 10px;
   position: relative;
   z-index: 0;
-  color: #202124;
+  color: #3c4043;
   cursor: pointer;
 }
 
@@ -21,45 +21,54 @@ nav .nav-link:after {
   bottom: 0px;
   width: 40px;
   height: 5px;
-  background: green;
+  background: #9aa289;
   content: "";
   opacity: 0;
   border-radius: 20px;
   transform: translateX(-10px);
   transition: all 0.3s;
 }
+
 nav .nav-link:hover:after {
   opacity: 1;
   transform: translateX(0px);
 }
-nav .navbar-brand{
+
+nav .navbar-brand {
   display: inline-block;
 }
-nav .btn{
+
+nav .btn {
   font-size: 15px;
   font-weight: 600;
 }
 
-nav img {
-  width: 50px;
-  height: 50px;
+nav .navbar-toggler img {
+  width: 30px;
+  height: 30px;
   visibility: hidden;
 }
 
-.logo img{
+.logo img {
   width: 50px;
   height: 50px;
-
 }
+
 .logo span {
   color: green;
   font-size: 24px;
   font-weight: 600;
-
 }
-.navbar-toggler img{
-  width: 30px;
-  height: 30px;
+
+.btn-outline-success {
+  color: #9aa289;
+  font-weight: 600;
+  border: 2px solid #9aa289;
+}
+
+.btn-outline-success:hover {
+  background-color: #9aa289;
+  color:#fff;
 }
 
 /* #award_symbol{
@@ -72,9 +81,8 @@ nav img {
   position: relative;
   left: -38px;
 } */
-
 @media only screen and (max-width: 768px) {
-  nav img{
+  nav .navbar-toggler img {
     visibility: visible;
   }
 }
