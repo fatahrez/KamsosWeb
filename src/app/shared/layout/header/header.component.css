@@ -28,14 +28,17 @@ nav .nav-link:after {
   transform: translateX(-10px);
   transition: all 0.3s;
 }
+
 nav .nav-link:hover:after {
   opacity: 1;
   transform: translateX(0px);
 }
-nav .navbar-brand{
+
+nav .navbar-brand {
   display: inline-block;
 }
-nav .btn{
+
+nav .btn {
   font-size: 15px;
   font-weight: 600;
 }
@@ -46,18 +49,27 @@ nav .navbar-toggler img {
   visibility: hidden;
 }
 
-.logo img{
+.logo img {
   width: 50px;
   height: 50px;
-
 }
+
 .logo span {
   color: green;
   font-size: 24px;
   font-weight: 600;
-
 }
 
+.btn-outline-success {
+  color: #9aa289;
+  font-weight: 600;
+  border: 2px solid #9aa289;
+}
+
+.btn-outline-success:hover {
+  background-color: #9aa289;
+  color:#fff;
+}
 
 /* #award_symbol{
   width: 50px;
@@ -69,9 +81,8 @@ nav .navbar-toggler img {
   position: relative;
   left: -38px;
 } */
-
 @media only screen and (max-width: 768px) {
-  nav .navbar-toggler img{
+  nav .navbar-toggler img {
     visibility: visible;
   }
 }
