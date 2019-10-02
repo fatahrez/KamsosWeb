@@ -30,7 +30,6 @@
 
 .learnMoreBtn {
   width: 200px;
-  border-radius: 8px;
   font-weight: 600;
   border: 2px solid #9aa289;
   transition: all .3s ease;
@@ -275,6 +274,7 @@
   .downloadApp .screenshots img {
     display: none;
   }
+
   .downloadApp .appDownloadBtn {
     font-size: 20px;
     width: 90%;
