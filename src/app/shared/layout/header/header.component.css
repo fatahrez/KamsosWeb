@@ -64,6 +64,7 @@ nav .navbar-toggler img {
   color: #9aa289;
   font-weight: 600;
   border: 2px solid #9aa289;
+  border-radius: 0px;
 }
 
 .btn-outline-success:hover {
