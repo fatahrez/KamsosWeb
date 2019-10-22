@@ -1,7 +1,7 @@
 <br><br><br><br><br>
 
 <ul *ngFor="let vet of vets">
-  <a [routerLink]="['/vet', vet.slug]" class="preview-link">
+  <a [routerLink]="['/vets', vet.slug]" class="preview-link">
     <h3>{{vet.first_name + " " + vet.middle_name}}</h3>
     <p> {{vet.qualification }}</p>
     <span> More Info ...</span>

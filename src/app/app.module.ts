@@ -23,7 +23,7 @@ import {
 } from './shared';
 
 
-const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: false });
+// const rootRouting: ModuleWithProviders =RouterModule.forRoot([], { useHash: false });
 
 
 @NgModule({
@@ -43,7 +43,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: fal
     FormsModule,
     ReactiveFormsModule,
     VetsModule,
-    rootRouting,
+    // rootRouting,
   ],
   providers: [],
   bootstrap: [AppComponent]
