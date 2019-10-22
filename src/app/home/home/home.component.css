@@ -262,12 +262,20 @@
 }
 
 @media only screen and (max-width: 768px) {
+  #doctor {
+    position: relative;
+    top: -50px;
+    left: -50px;
+  }
 
   #doctor_svg,
-  #circle_grey2,
-  #circle_grey2,
   #circle_greeny_doctor,
   #circle_grey_doctor {
+    transform: scale(0.6);
+  }
+
+  #circle_grey2,
+  #circle_grey2 {
     display: none;
   }
 
