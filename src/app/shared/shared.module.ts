@@ -8,11 +8,13 @@ import { ListErrorsComponent } from './list-errors/list-errors.component';
 
 import { MaterialModule } from '../material';
 import { ShowAuthedDirective } from './show-authed.directive';
+import { VetListComponent } from './vet-helpers/vet-list/vet-list.component';
 
 @NgModule({
   declarations: [
     ListErrorsComponent,
-    ShowAuthedDirective
+    ShowAuthedDirective,
+    VetListComponent
   ],
   imports: [
     CommonModule,
