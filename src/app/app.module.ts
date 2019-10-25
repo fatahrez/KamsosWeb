@@ -25,6 +25,7 @@ import {
 // const rootRouting: ModuleWithProviders =RouterModule.forRoot([], { useHash: false });
 
 
+
 @NgModule({
   declarations: [ AppComponent, FooterComponent, HeaderComponent ],
   imports: [
