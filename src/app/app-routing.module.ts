@@ -3,7 +3,7 @@ import {Routes, RouterModule, PreloadAllModules} from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'vets',
+    path: 'vet',
     loadChildren: './vets/vets.module#VetsModule'
   }
 ];
