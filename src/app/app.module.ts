@@ -1,6 +1,5 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ModuleWithProviders } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +22,8 @@ import {
 } from './shared';
 
 
-const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: false });
+// const rootRouting: ModuleWithProviders =RouterModule.forRoot([], { useHash: false });
+
 
 
 @NgModule({
@@ -43,7 +43,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: fal
     FormsModule,
     ReactiveFormsModule,
     VetsModule,
-    rootRouting,
+    // rootRouting,
   ],
   providers: [],
   bootstrap: [AppComponent]

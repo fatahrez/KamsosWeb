@@ -1,25 +1,21 @@
-import { NgModule} from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import {ModuleWithProviders} from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { NgModule, ModuleWithProviders } from '@angular/core';
+import { CommonModule} from '@angular/common';
 
 import { VetsComponent } from './vets/vets.component';
 import { SharedModule } from '../shared';
+import { VetResolverService } from './vets/vet-resolver.service';
+import { VetRoutingModule } from './vets/vet-routing.module';
 
-const vetsRouting: ModuleWithProviders = RouterModule.forChild([
-  {
-    path: 'vets',
-    component: VetsComponent
-  }
-]);
 
 @NgModule({
   declarations: [VetsComponent],
   imports: [
-    vetsRouting,
-    CommonModule,
-    SharedModule
+    SharedModule,
+    VetRoutingModule,
+    CommonModule
+  ],
+  providers: [
+    VetResolverService
   ]
 })
 export class VetsModule { }

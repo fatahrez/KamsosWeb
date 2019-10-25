@@ -8,11 +8,17 @@ import { ListErrorsComponent } from './list-errors/list-errors.component';
 
 import { MaterialModule } from '../material';
 import { ShowAuthedDirective } from './show-authed.directive';
+import { VetListComponent } from './vet-helpers/vet-list/vet-list.component';
+import { VetPreviewComponent } from './vet-helpers/vet-preview/vet-preview.component';
+import { VetMetaComponent } from './vet-helpers/vet-meta/vet-meta.component';
 
 @NgModule({
   declarations: [
     ListErrorsComponent,
-    ShowAuthedDirective
+    ShowAuthedDirective,
+    VetListComponent,
+    VetPreviewComponent,
+    VetMetaComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +35,8 @@ import { ShowAuthedDirective } from './show-authed.directive';
     HttpClientModule,
     ListErrorsComponent,
     RouterModule,
-    ShowAuthedDirective
+    ShowAuthedDirective,
+    VetListComponent
   ],
   providers: []
 })

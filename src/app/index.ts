@@ -1,3 +1,4 @@
 export * from './app.component';
 export * from './app.module';
-// export * from './material';
+export * from  './material';
+

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {UserService, VetsService} from '../../core/services';
 import {User} from '../../core/models';
 import {Vet} from '../../core/models';
@@ -11,28 +11,26 @@ import {Vet} from '../../core/models';
 })
 export class VetsComponent implements OnInit {
   currentUser: User;
-  vets: Vet[];
+  vet: Vet;
 
   constructor(
     private route: ActivatedRoute,
     private userService: UserService,
-    private vetService: VetsService
+    private vetService: VetsService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
-      this.userService.currentUser.subscribe(
-        (userData: User) => {
-          this.currentUser = userData;
-        }
-      );
+    this.route.data.subscribe(
+      (data: {vet: Vet}) => {
+        this.vet = data.vet;
+      }
+    );
 
-      this.getAllVets();
-  }
-
-  getAllVets() {
-    this.vetService.getAll().subscribe(vets => {
-      const vetz = vets["vet"]["results"];
-      this.vets = vetz;
-    });
+    this.userService.currentUser.subscribe(
+      (userData: User) => {
+        this.currentUser = userData;
+      }
+    )
   }
 }
