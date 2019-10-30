@@ -7,9 +7,9 @@ const routes: Routes = [
   {
     path: ':slug',
     component: VetsComponent,
-    // resolve: {
-    //   vet: VetResolverService
-    // }
+    resolve: {
+      vet: VetResolverService
+    }
   }
 ];
 

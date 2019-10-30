@@ -24,6 +24,7 @@ export class VetsComponent implements OnInit {
     this.route.data.subscribe(
       (data: {vet: Vet}) => {
         this.vet = data.vet;
+        console.log(this.vet.slug);
       }
     );
 
@@ -31,6 +32,6 @@ export class VetsComponent implements OnInit {
       (userData: User) => {
         this.currentUser = userData;
       }
-    )
+    );
   }
 }

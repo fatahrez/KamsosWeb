@@ -20,4 +20,9 @@ export class VetsService {
         return data;
       }));
   }
+
+  get(slug): Observable<Vet> {
+    return this.apiService.get(`/vets/` + slug + `/`)
+      .pipe(map(data => data.vet));
+  }
 }
