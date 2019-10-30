@@ -19,7 +19,7 @@ export class VetListComponent implements OnInit {
 
     this.vetsService.getAll().subscribe(data => {
       this.results = data["vet"]["results"];
-      console.log(this.results)
+      console.log(this.results);
     });
   }
 }

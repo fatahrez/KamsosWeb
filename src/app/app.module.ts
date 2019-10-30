@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -42,7 +43,7 @@ import {
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    VetsModule,
+    VetsModule
     // rootRouting,
   ],
   providers: [],

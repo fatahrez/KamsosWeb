@@ -11,7 +11,7 @@
   box-shadow: 0 20px 40px 5px rgba(0, 0, 0, 0.2);
 }
 .lessonsIntro p{
-  color: #3c4043;
+  color: #5f6368;
 }
 
 .lessonsIntro button,
@@ -29,7 +29,7 @@
 }
 
 p {
-  color: #3c4043;
+  color: #5f6368;
 }
 
 .col-md-3 {
@@ -37,7 +37,10 @@ p {
 }
 
 .lessonsInfo {}
+.lessonsInfo h3:first-child{
+  color: #3c4043;
 
+}
 .lessonsInfo .number {
   font-size: 20px;
   font-weight: 600;
@@ -47,8 +50,19 @@ p {
 }
 .lessonsInfo a,
 .lessonsInfo a:hover{
-  color: #000;
-  /* font-weight: 600; */
+  color: #3c4043;
+  font-weight: 600;
+}
+.readPdfBtn,
+.readPdfBtn:focus,
+.readPdfBtn:active{
+  color: #3c4043!important;
+  font-size: 14px!important;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: #70885D99;
+  position: absolute;
+  bottom: 0px!important;
 }
 
 @media only screen and (max-width: 768px) {

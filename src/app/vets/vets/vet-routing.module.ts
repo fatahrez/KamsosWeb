@@ -1,7 +1,7 @@
-import {RouterModule, Routes} from '@angular/router';
-import {VetsComponent} from './vets.component';
-import {NgModule} from '@angular/core';
-import {VetResolverService} from './vet-resolver.service';
+import { RouterModule, Routes } from '@angular/router';
+import { VetsComponent } from './vets.component';
+import { NgModule } from '@angular/core';
+import { VetResolverService } from './vet-resolver.service';
 
 const routes: Routes = [
   {
@@ -15,7 +15,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [VetResolverService]
 })
-export class VetRoutingModule {}
-
+export class VetRoutingModule { }
