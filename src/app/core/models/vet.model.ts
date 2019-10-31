@@ -5,9 +5,9 @@ export interface Vet {
   username: string;
   slug: string;
   email: string;
-  telephoneNumber: string;
+  telephone_number: string;
   county: string;
-  subCounty: string;
-  qualification: string;
-  vetImage: string;
+  sub_county: string;
+  qualifications: string;
+  vet_image: string;
 }
