@@ -2,7 +2,7 @@
 <div class="container">
   <h1>{{vet.username}} -- vet</h1>
   <h2>{{ vet.first_name + vet.last_name}}</h2>
-  <img src="{{ vet.vet_image }}"/>
+  <img class="img-fluid" src="{{ vet.vet_image }}"/>
   <span>{{vet.email}}</span><br>
   <a href="tel:+254789268466">Call for vet</a><br>
   <span>County - {{ vet.county}} </span><br>
@@ -10,6 +10,6 @@
   <p><strong>Qualifications</strong></p>
   <hr>
   <p> {{vet.qualifications}}</p>
-  <br><br>
+  <br>
   <button class="btn btn-outline-success" (click)="submitRequest()">Request this vet</button>
 </div>
