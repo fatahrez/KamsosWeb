@@ -1,4 +1,13 @@
 <br><br><br><br><br>
 <div class="container">
-   <h1>{{vet.slug}} -- vet</h1>
+  <h1>{{vet.username}} -- vet</h1>
+  <h2>{{ vet.first_name + vet.last_name}}</h2>
+  <img src="{{ vet.vet_image }}"/>
+  <span>{{vet.email}}</span><br>
+  <a href="tel:+254789268466">Call for vet</a><br>
+  <span>County - {{ vet.county}} </span><br>
+  <span>Sub-County - {{ vet.sub_county }} </span><br>
+  <p><strong>Qualifications</strong></p>
+  <hr>
+  <p> {{vet.qualifications}}</p>
 </div>
