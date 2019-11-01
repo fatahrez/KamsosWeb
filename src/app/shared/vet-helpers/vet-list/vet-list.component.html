@@ -1,3 +1,10 @@
-<app-vet-preview
-  *ngFor="let vet of results" [vet]="vet">
-</app-vet-preview>
+<div class="container contVets">
+  <div class="row">
+
+    <app-vet-preview class="col-md-4" *ngFor="let vet of results" [vet]="vet">
+
+    </app-vet-preview>
+
+  </div>
+
+</div>

@@ -1,0 +1,28 @@
+.vet-preview {
+  color: #80868b;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 0 23px 0 rgba(0, 0, 0, 0.1);
+}
+
+.vet-preview h3 {
+  color: #202124;
+  font-weight: 600;
+}
+
+.vet-preview h6 {
+  color: #3c4043;
+  font-weight: 600;
+}
+
+.vet-preview img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.preview-link {
+  width: 70%;
+  border-radius: 4px;
+  font-weight: 600;
+}
