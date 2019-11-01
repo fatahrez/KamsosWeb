@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {UserService, VetsService} from '../../core/services';
+import {RequestService, UserService, VetsService} from '../../core/services';
 import {User} from '../../core/models';
 import {Vet} from '../../core/models';
 
@@ -17,6 +17,7 @@ export class VetsComponent implements OnInit {
     private route: ActivatedRoute,
     private userService: UserService,
     private vetService: VetsService,
+    private requestService: RequestService,
     private router: Router,
   ) { }
 
@@ -33,5 +34,9 @@ export class VetsComponent implements OnInit {
         this.currentUser = userData;
       }
     );
+  }
+
+  submitRequest() {
+    this.requestService.add(this.vet.slug).subscribe();
   }
 }
