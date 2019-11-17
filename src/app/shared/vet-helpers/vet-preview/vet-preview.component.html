@@ -1,22 +1,28 @@
-  <div class="card vet-preview p-3">
+  <div class="card vet-preview">
     <!--  <app-vet-meta [vet]="vet"></app-vet-meta>-->
 
 
-    <img src="{{vet.vet_image}}" alt="">
+    <!-- <img src="{{vet.vet_image}}" alt=""> -->
+    <span>
+      <i class="fas fa-user-md"></i>
+    </span>
 
-    <h3>{{ vet.first_name}}</h3>
-    <small>{{vet.middle_name}} {{vet.last_name}}</small>
-    <hr>
-    <h6>Qualifications</h6>
-    <p>{{vet.qualifications}}</p>
-    <p>{{vet.county}} <small>({{vet.sub_county}})</small></p>
-    <p></p>
+    <div class="content p-3">
+      <h3>{{ vet.first_name}}</h3>
+      <small>{{vet.middle_name}} {{vet.last_name}}</small>
+      <hr>
+      <h6>Qualifications</h6>
+      <p>{{vet.qualifications}}</p>
+      <p>{{vet.county}} <small>({{vet.sub_county}})</small></p>
+      <p></p>
 
-    <div class="text-center">
-      <a [routerLink]="['/vet', vet.slug]" class="btn btn-dark preview-link">
-        View
-      </a>
+      <div class="text-center">
+        <a [routerLink]="['/vet', vet.slug]" class="btn btn-dark preview-link">
+          View
+        </a>
+      </div>
     </div>
+
 
 
   </div>
