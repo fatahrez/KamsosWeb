@@ -2,9 +2,14 @@
   color: #80868b;
   border-radius: 8px;
   border: none;
-  box-shadow: 0 0 23px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 23px 0 rgba(0, 0, 0, 0.2);
 }
 
+.vet-preview span {
+  font-size: 120px;
+  text-align: center;
+  background-color: #f1f3f4;
+}
 .vet-preview h3 {
   color: #202124;
   font-weight: 600;

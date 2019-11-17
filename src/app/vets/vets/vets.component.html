@@ -1,15 +1,46 @@
-<br><br><br><br><br>
-<div class="container">
-  <h1>{{vet.username}} -- vet</h1>
-  <h2>{{ vet.first_name + " " + vet.last_name}}</h2>
-  <img class="img-fluid" src="{{ vet.vet_image }}"/>
-  <span>{{vet.email}}</span><br>
-  <a href="tel:+254789268466">Call for vet</a><br>
-  <span>County - {{ vet.county}} </span><br>
-  <span>Sub-County - {{ vet.sub_county }} </span><br>
-  <p><strong>Qualifications</strong></p>
-  <hr>
-  <p> {{vet.qualifications}}</p>
-  <br>nch
-  <button class="btn btn-outline-success" (click)="submitRequest()">Request this vet</button>
+<div class="vetDetail">
+
+  <div class="container p-5">
+    <div class="row">
+
+      <div class="col-md-6 text-center">
+        <!-- <img class="img-fluid" src="{{ vet.vet_image }}" /> -->
+        <span>
+          <i class="fas fa-user-md"></i>
+        </span>
+
+      </div>
+
+      <div class="col-md-6">
+
+        <div class="content text-capitalize">
+          <h1>{{vet.username}}</h1>
+          <h4>{{ vet.first_name + " " + vet.last_name}} <small class="ml-3">( {{vet.email}} )</small></h4>
+          <hr>
+          <span><strong>County -</strong> {{ vet.county}} </span><br>
+          <span><strong>Sub-County -</strong> {{ vet.sub_county }} </span>
+          <br>
+          <br>
+          <p><strong>Qualifications</strong></p>
+          <p> {{vet.qualifications}}</p>
+          <br>
+          <button class="btn btn-outline-success" (click)="submitRequest()">Request vet</button>
+
+          <!-- <div class="row">
+          <div class="col-md-6">
+            <a href="tel:+254789268466">Call for vet</a><br>
+
+          </div>
+          <div class="col-md-6">
+            <button class="btn btn-outline-success" (click)="submitRequest()">Request this vet</button>
+
+          </div>
+
+        </div> -->
+        </div>
+
+      </div>
+
+    </div>
+  </div>
 </div>
