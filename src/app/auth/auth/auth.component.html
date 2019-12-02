@@ -26,6 +26,14 @@
 
             <br>
 
+            <mat-form-field class="form-group" appearance="outline" *ngIf="authType == 'register'">
+              <mat-label>Phone Number</mat-label>
+              <input matInput formControlName="phone_number"  type="text"  required>
+              <mat-icon matSuffix>account_circle</mat-icon>
+            </mat-form-field>
+
+            <br>
+
             <mat-form-field class="form-group" appearance="outline">
               <mat-label>Email</mat-label>
               <input matInput formControlName="email" type="text" required>
