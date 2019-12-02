@@ -21,6 +21,7 @@ import {
   FooterComponent,
   HeaderComponent,
 } from './shared';
+import {AgrovetModule} from './agrovet/agrovet.module';
 
 
 // const rootRouting: ModuleWithProviders =RouterModule.forRoot([], { useHash: false });
@@ -39,6 +40,7 @@ import {
     HomeModule,
     AboutModule,
     ContactModule,
+    AgrovetModule,
     ResourcesModule,
     MaterialModule,
     FormsModule,
