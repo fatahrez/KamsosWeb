@@ -35,9 +35,10 @@ export class AuthComponent implements OnInit {
      this.route.url.subscribe(data => {
 
        this.authType = data[data.length - 1].path;
-       this.title = (this.authType === 'login') ? 'Sign in': 'Sign Up';
+       this.title = (this.authType === 'login') ? 'Sign in' : 'Sign Up';
        if (this.authType === 'register') {
          this.authForm.addControl('username', new FormControl('', Validators.required));
+         this.authForm.addControl('phone_number', new FormControl('', Validators.required));
        }
      });
 
