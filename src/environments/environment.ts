@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api_url: 'https://kamsos.herokuapp.com/api/v1'
+  api_url: 'http://api.kamsos.com/api/v1'
 };
 
 /*
