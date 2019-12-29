@@ -12,6 +12,7 @@ import {Vet} from '../../core/models';
 export class VetsComponent implements OnInit {
   currentUser: User;
   vet: Vet;
+  vetImage: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,7 +26,7 @@ export class VetsComponent implements OnInit {
     this.route.data.subscribe(
       (data: {vet: Vet}) => {
         this.vet = data.vet;
-        console.log(this.vet.slug);
+        this.vetImage = 'http://167.172.122.210' + this.vet.vet_image.substring(21, this.vet.vet_image.length);
       }
     );
 

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api_url: 'http://api.kamsos.com/api/v1'
+  api_url: 'http://167.172.122.210/api/v1'
 };
 
 /*
