@@ -8,7 +8,7 @@ import {catchError} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class VetResolverService implements Resolve<Vet>{
+export class VetResolverService implements Resolve<Vet> {
 
   constructor(
     private vetsService: VetsService,
@@ -17,7 +17,7 @@ export class VetResolverService implements Resolve<Vet>{
   ) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
-    return this.vetsService.get(route.params['slug'])
+    return this.vetsService.get(route.params.slug)
       .pipe(catchError(err => this.router.navigateByUrl('/')));
   }
 }

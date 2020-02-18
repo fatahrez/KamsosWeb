@@ -22,6 +22,7 @@ import {
   HeaderComponent,
 } from './shared';
 import {AgrovetModule} from './agrovet/agrovet.module';
+import {CheckoutModule} from './checkout/checkout.module';
 
 
 // const rootRouting: ModuleWithProviders =RouterModule.forRoot([], { useHash: false });
@@ -45,7 +46,8 @@ import {AgrovetModule} from './agrovet/agrovet.module';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    VetsModule
+    VetsModule,
+    CheckoutModule,
     // rootRouting,
   ],
   providers: [],
