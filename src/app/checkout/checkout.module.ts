@@ -1,12 +1,20 @@
-import { NgModule } from '@angular/core';
+import {ModuleWithProviders, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CheckoutComponent } from './checkout/checkout.component';
+import {RouterModule} from '@angular/router';
 
-
+const checkoutRouting: ModuleWithProviders = RouterModule.forChild([
+  {
+    path: 'checkout',
+    component: CheckoutComponent,
+  }
+]);
 
 @NgModule({
-  declarations: [],
+  declarations: [CheckoutComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    checkoutRouting,
   ]
 })
 export class CheckoutModule { }
