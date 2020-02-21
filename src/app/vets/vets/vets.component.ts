@@ -26,7 +26,7 @@ export class VetsComponent implements OnInit {
     this.route.data.subscribe(
       (data: {vet: Vet}) => {
         this.vet = data.vet;
-        this.vetImage = 'http://167.172.122.210' + this.vet.vet_image.substring(21, this.vet.vet_image.length);
+        this.vetImage = 'http://167.172.122.210:8080' + this.vet.vet_image.substring(21, this.vet.vet_image.length);
       }
     );
 
