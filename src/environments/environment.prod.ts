@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api_url: 'http://167.172.122.210/api/v1'
+  api_url: 'http://api.kamsos.com:8080/api/v1'
 };
