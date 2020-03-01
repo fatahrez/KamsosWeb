@@ -259,6 +259,15 @@
   .downloadApp .screenshots img {
     display: none;
   }
+
+  #doctor_svg{
+    display: none;
+  }
+
+  #circle_grey2,
+  #circle_grey2, #circle_greeny_doctor {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 768px) {
