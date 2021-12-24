@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api_url: 'http://kamsos.herokuapp.com/api/v1'
+  api_url: 'https://kamsos.herokuapp.com/api/v1'
 };
